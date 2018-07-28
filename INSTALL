@@ -1,9 +1,75 @@
-Building GRIF
+You can compile a daemon for Ubuntu 16.04 using the following instructions.
 
-See doc/readme-qt.rst for instructions on building GRIF QT,
-the intended-for-end-users, nice-graphical-interface, reference
-implementation of GRIF.
+Update your Ubuntu machine.
 
-See doc/build-*.txt for instructions on building grifd,
-the intended-for-services, no-graphical-interface, reference
-implementation of GRIF.
+sudo apt-get update
+sudo apt-get upgrade
+
+Install the dependencies to compile from source code.
+
+sudo apt-get install build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev git libssl1.0.0-dbg
+sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
+
+Create a directory for the source code.
+
+mkdir GRIF
+cd GRIF
+
+Download the source code.
+wget https://github.com/Tartariaorg/Grif-2/archive/master.zip
+
+
+Extract the tar file using the following command.
+
+tar -xzvf GRIF-2-master.zip
+
+Go to the src directory of src/leveldb.
+
+cd GRIF-2-master
+cd src
+cd leveldb
+
+using the following command.
+
+make libleveldb.a libmemenv.a
+
+Go to the src directory of source code.
+
+cd ..
+
+Execute the following command to compile the daemon.
+
+make -f makefile.unix
+
+The compiling will take about 30 minutes depending on your system.
+
+Install the daemon.
+
+chmod +x grifd
+sudo mv grifd /usr/bin/
+
+Create the config file.
+
+mkdir $HOME/.grif
+nano $HOME/.grif/grif.conf
+Paste the following lines in GRIF.conf.
+
+rpcuser=rpc_GRIF
+rpcpassword=password
+rpcallowip=127.0.0.1
+listen=1
+server=1
+txindex=1
+daemon=1
+addnode=209.126.77.219
+addnode=80.211.31.145
+addnode=94.177.207.144
+addnode=80.211.161.110
+
+
+Start your node with the following command.
+
+grifd
+
+
+
