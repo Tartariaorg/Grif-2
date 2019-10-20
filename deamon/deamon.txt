@@ -1,0 +1,48 @@
+Rent a VPS running Ubuntu 14.04 server.
+
+Update your VPS using the following commands.
+
+sudo apt-get update
+sudo apt-get upgrade
+
+Install the necessary dependencies using the following commands.
+
+sudo apt-get install build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev git libssl1.0.0-dbg
+sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
+
+download
+
+wget https://tartaria.org/doc/grif-daemon-linux.tar.gz
+
+
+Extract the tar file using the following command.
+
+tar -xzvf grif-daemon-linux.tar.gz
+
+Install the daemon.
+
+chmod +x grifd
+sudo mv grifd /usr/bin/
+
+Create the config file.
+
+mkdir $HOME/.grif
+nano $HOME/.grif/grif.conf
+
+Paste the following lines in GRIF.conf.
+
+rpcuser=rpc_GRIF
+rpcpassword=69c863e3356d3dae95df454a1
+rpcallowip=*
+listen=1
+server=1
+txindex=1
+daemon=1
+addnode=209.126.77.219
+addnode=80.211.31.145
+addnode=94.177.207.144
+
+Start your node with the following command.
+
+
+grifd
