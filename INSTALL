@@ -61,10 +61,8 @@ listen=1
 server=1
 txindex=1
 daemon=1
-addnode=209.126.77.219
-addnode=80.211.31.145
-addnode=94.177.207.144
-addnode=80.211.161.110
+addnode=5.101.121.36
+addnode=185.4.73.54
 
 
 Start your node with the following command.
