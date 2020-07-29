@@ -1,9 +1,7 @@
 
 If your wallet can not independently find public nodes for synchronization of the blockchain, add the following lines to the configuration file GRIF.conf:
-addnode = 209.126.77.219
-addnode = 80.211.31.145
-addnode = 94.177.207.144
-addnode = 80.211.161.110
+addnode=5.101.121.36
+addnode=185.4.73.54
 
 
 GRIF development tree
