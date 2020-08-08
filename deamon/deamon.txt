@@ -51,6 +51,6 @@ Download and unzip the updated blockchain to speed up synchronization.
 
 grifd stop
 cd $HOME/.grif
-wget 
+wget https://tartaria.org/docs/blockchain.zip
 unzip -xzvf blockchain.zip
 grifd
