@@ -12,7 +12,7 @@ sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev lib
 
 download
 
-wget https://tartaria.org/doc/grif-daemon-linux.tar.gz
+wget https://github.com/Tartariaorg/Grif-2/raw/master/deamon/grif-daemon-linux.zip
 
 
 Extract the tar file using the following command.
@@ -31,16 +31,16 @@ nano $HOME/.grif/grif.conf
 
 Paste the following lines in GRIF.conf.
 
-rpcuser=rpc_GRIF
-rpcpassword=69c863e3356d3dae95df454a1
-rpcallowip=*
+rpcuser=rpc_grif
+rpcpassword=pass
+rpcallowip=127.0.0.1
+rpcport=37152
 listen=1
 server=1
-txindex=1
-daemon=1
-addnode=209.126.77.219
-addnode=80.211.31.145
-addnode=94.177.207.144
+addnode=5.101.121.36
+addnode=185.4.73.54
+enableaccounts=1
+staking=0
 
 Start your node with the following command.
 
@@ -50,5 +50,5 @@ grifd
 Для ускорения синхронизации скачайте и распакуйте обновленный блокчейн.
 
 cd $HOME/.grif
-wget
-tar -xzvf grif-daemon-linux.tar.gz
+wget 
+unzip -xzvf blockchain.zip
