@@ -1,4 +1,4 @@
-Rent a VPS running Ubuntu 14.04 server.
+Rent a VPS running Ubuntu 16.04 server.
 
 Update your VPS using the following commands.
 
@@ -17,7 +17,7 @@ wget https://tartaria.org/doc/grif-daemon-linux.tar.gz
 
 Extract the tar file using the following command.
 
-tar -xzvf grif-daemon-linux.tar.gz
+unzip -xzvf grif-daemon-linux.zip
 
 Install the daemon.
 
@@ -46,3 +46,9 @@ Start your node with the following command.
 
 
 grifd
+
+Для ускорения синхронизации скачайте и распакуйте обновленный блокчейн.
+
+cd $HOME/.grif
+wget
+tar -xzvf grif-daemon-linux.tar.gz
