@@ -47,8 +47,10 @@ Start your node with the following command.
 
 grifd
 
-Для ускорения синхронизации скачайте и распакуйте обновленный блокчейн.
+Download and unzip the updated blockchain to speed up synchronization.
 
+grifd stop
 cd $HOME/.grif
 wget 
 unzip -xzvf blockchain.zip
+grifd
