@@ -17,7 +17,7 @@ wget https://github.com/Tartariaorg/Grif-2/raw/master/deamon/grif-daemon-linux.z
 
 Extract the tar file using the following command.
 
-unzip -xzvf grif-daemon-linux.zip
+unzip grif-daemon-linux.zip
 
 Install the daemon.
 
@@ -52,5 +52,5 @@ Download and unzip the updated blockchain to speed up synchronization.
 grifd stop
 cd $HOME/.grif
 wget https://tartaria.org/docs/blockchain.zip
-unzip -xzvf blockchain.zip
+unzip blockchain.zip
 grifd
